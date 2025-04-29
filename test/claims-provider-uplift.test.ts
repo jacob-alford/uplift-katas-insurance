@@ -113,7 +113,7 @@ describe(UpliftClaimsProvider, () => {
 
     it("throws a PolicyNotFoundError when the policy ID isn't found", async () => {
       const result = mockUpliftClaimsProvider.processClaim({
-        policyId: "POL123",
+        policyId: "POL000",
         incidentType: "fire",
         incidentDate: new Date("2023-06-16"),
         amountClaimed: 11000,

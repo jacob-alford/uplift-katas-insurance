@@ -30,7 +30,14 @@ pnpm run start
 
 ## Architecture
 
-This repository is written with the following architecture, it is nearly identical to the architecture employed by [NestJS](https://nestjs.com). In this case, it's written such that it abides SOLID principles.
+This repository is written with the following architecture, it is nearly identical to the architecture employed by [NestJS](https://nestjs.com). In this case, it's written such that it abides SOLID principles. The upside to using SOLID is that the resulting code is:
+
+- highly testable: 100% coverage is easy to attain;
+- extensible: it is easy to write distinct encapsulations of business logic and expand existing services;
+- easy to reason about: operations called by name make it obvious what's happening;
+- and adaptable: simply swap out a provided service implementation to change the underlying behavior without modifying an unrelated provider.
+
+The downside to the Nest / SOLID architecture is that engineers who are unfamiliar with dependency injection might have a difficult time figuring out exactly what is happening.
 
 ### SOLID principles
 
